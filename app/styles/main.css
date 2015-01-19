@@ -1,0 +1,36 @@
+body {
+  background: url(../images/vineyard-wallpaper.jpg) no-repeat center center fixed;
+  background-size:cover;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+#header {
+
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+.list-group-item {
+  background: rgba(255, 255, 255, 0.5);
+}
+ .panel-danger,
+ .panel-warning {
+  background: rgba(255, 255, 255, 0.7);
+ }
+
+.panel-heading {
+  font-size: 1.2em;
+}
+
+.jumbotron {
+  background: none;
+}
+
+
+
+.form-control {
+  font-size: 1.5em;
+}

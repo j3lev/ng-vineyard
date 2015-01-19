@@ -1,0 +1,80 @@
+[
+  {
+    "Name": "Dow's Vintage Port",
+    "Type": "Port",
+    "Color": "Red",
+    "Vintage": "2011",
+    "ABV": "14.5%",
+    "Characteristics": {
+      "Acidity": 25,
+      "Sweet": 90,
+      "Fruit": 80,
+      "Body": 70
+    } 
+  },
+  {
+    "Name": "Shiraz McLaren Vale Carnival of Love",
+    "Color": "Red",
+    "Type": "Shiraz",
+    "Vintage": "2012",
+    "ABV": "12%",
+    "Characteristics": {
+      "Acidity": 30,
+      "Sweet": 35,
+      "Fruit": 70,
+      "Body": 90
+    }
+  },
+  {
+    "Name": "Douro Chryseia",
+    "Color": "Red",
+    "Type": "Port",
+    "Vintage": "2011",
+    "ABV": "13%",
+    "Characteristics": {
+      "Acidity": 20,
+      "Sweet": 90,
+      "Fruit": 85,
+      "Body": 60
+    }
+  },
+  {
+    "Name": "Chardonnay Margaret River Art Series",
+    "Color": "white",
+    "Type": "Chardonnay",
+    "Vintage": "2011",
+    "ABV": "17%",
+    "Characteristics": {
+      "Acidity": 40,
+      "Sweet": 35,
+      "Fruit": 30,
+      "Body": 50
+    }
+  },
+  {
+    "Name": "Chianti Classico San Lorenzo",
+    "Color": "red",
+    "Type": "Merlot, Sangiovese, Malvasia Nera Blend",
+    "Vintage": "2010",
+    "ABV": "15%",
+    "Characteristics": {
+      "Acidity": 60,
+      "Sweet": 25,
+      "Fruit": 25,
+      "Body": 70
+    }
+  },
+  {
+    "Name": "Estancia Pinnacles Ranches",
+    "Color": "white",
+    "Type": "Sauvignon",
+    "Vintage": "2006",
+    "ABV": "12.5%",
+    "Characteristics": {
+      "Acidity": 20,
+      "Sweet": 40,
+      "Fruit": 70,
+      "Body": 60
+    }
+  }
+]
