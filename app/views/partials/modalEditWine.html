@@ -1,0 +1,15 @@
+<div class="modal-header">
+        <h3 class="modal-title">Edit Wine</h3>
+      </div>
+      <p>Hello world</p>
+      <input type="text" ng-model="wine.Name"><br />
+      <input type="text" ng-model="wine.Color"><br />
+      <input type="text" ng-model="wine.Vintage"><br />
+      <input type="text" ng-model="wine.Type"><br />
+      <input type="text" ng-model="wine.ABV"><br />
+      <button class="btn btn-default" ng-click="sendIt(editName, editColor, editABV, editType, editVintage)">Send</button>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="">Save Changes</button>
+      <button class="btn btn-warning" ng-click="$close()">Cancel</button>
+    </div>

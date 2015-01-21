@@ -23,14 +23,13 @@
       </div>
       <div class="clearfix">&nbsp;</div>
       <div class="row">
-        <!-- <pre>{{ wines | json }}</pre> --> 
         <div class="col-xs-12 col-sm-6 col-lg-4" ng-repeat="wine in wines" id="wine-{{$index}}">
           
           <div class="panel" ng-class="{'panel-danger': wine.Color.toLowerCase() == 'red', 'panel-warning': wine.Color.toLowerCase() == 'white'}">
             <div class="panel-heading">
               <strong>{{wine.Name}}</strong>
               <button class="btn btn-default glyphicon glyphicon-remove pull-right btn-xs" type="button"></button>
-              <button class="btn btn-default glyphicon glyphicon-edit pull-right btn-xs" type="button" ng-click="makeSelected($index, wine.Name, wine.Color, wine.ABV, wine.Type, wine.Vintage)"></button>
+              <button class="btn btn-default glyphicon glyphicon-edit pull-right btn-xs" type="button" ng-click="edit($index, wine)"></button>
               <div class="clearfix"></div>
             </div>
             <div class="list-group-item" ng-repeat="(attr, x) in wine" ng-hide="attr=='Color' || attr=='Characteristics'">
@@ -49,44 +48,29 @@
             
           </div>
         </div>
-      <input type="text" ng-model="editName"><br />
-      <input type="text" ng-model="editColor"><br />
-      <input type="text" ng-model="editABV"><br />
-      <input type="text" ng-model="editType"><br />
-      <input type="text" ng-model="editVintage"><br />
-      <button class="btn btn-default" ng-click="sendIt(editName, editColor, editABV, editType, editVintage)">Send that shit</button>
+        
       </div>
-    </div>
-    
-    <script type="text/ng-template" id="myModalContent.html">
-    <div class="modal-header">
-      <h3 class="modal-title">I'm a modal!</h3>
-    </div>
-    <div class="modal-body">
-      <p>Hello world</p>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-primary" ng-click="ok()">OK</button>
-      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-    </div>
-    </script>
-
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
-    <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
-    <script src="../bower_components/angular-route/angular-route.min.js"></script>
-    <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="../bower_components/angular-touch/angular-touch.min.js"></script>
-    <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-    
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/WineListCtrl.js"></script>
-    <script src="scripts/services/WineJSONsvc.js"></script>
-    
-  </body>
+  </div>
+  </div>
+  
+  
+  <!--[if lt IE 9]>
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
+  <script src="bower_components/json3/lib/json3.js"></script>
+  <![endif]-->
+  
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="../bower_components/angular-route/angular-route.min.js"></script>
+  <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="../bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/WineListCtrl.js"></script>
+  <script src="scripts/services/WineJSONsvc.js"></script>
+  
+</body>
 </html>
