@@ -1,15 +1,47 @@
 <div class="modal-header">
-        <h3 class="modal-title">Edit Wine</h3>
+  <h3 class="modal-title">{{CreateOrEdit}} Wine</h3>
+</div>
+<div class="modal-body">
+  <div class="col-xs-12">
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label">Name</label>
+        <input class="form-control" type="text" ng-model="wine.Name">
       </div>
-      <p>Hello world</p>
-      <input type="text" ng-model="wine.Name"><br />
-      <input type="text" ng-model="wine.Color"><br />
-      <input type="text" ng-model="wine.Vintage"><br />
-      <input type="text" ng-model="wine.Type"><br />
-      <input type="text" ng-model="wine.ABV"><br />
-      <button class="btn btn-default" ng-click="sendIt(editName, editColor, editABV, editType, editVintage)">Send</button>
+       <div class="form-group">
+      <label class="control-label"><input type="radio" ng-model="wine.Color" value="red">&nbsp;Red</label><br />
+      <label class="control-label"><input type="radio" ng-model="wine.Color" value="white">&nbsp;White</label><br />
+      </div>
+       <div class="form-group">
+      <label class="control-label">Type</label>
+      <input class="form-control" type="text" ng-model="wine.Type">
+      </div>
+       <div class="form-group">
+      <label class="control-label">Vintage</label>
+      <input class="form-control" type="text" ng-model="wine.Vintage">
+      </div>
+       <div class="form-group">
+      <label class="control-label">ABV</label>
+      <input class="form-control" type="text" ng-model="wine.ABV">
+      
+      </div>
     </div>
-    <div class="modal-footer">
-      <button class="btn btn-primary" ng-click="">Save Changes</button>
-      <button class="btn btn-warning" ng-click="$close()">Cancel</button>
+    <div class="col-xs-3 form-group">
+      <label class="control-label">Acidity</label>
+      <input class="form-control" type="number" ng-model="wine.Characteristics.Acidity" integer min="0" max="100" maxlength="2">
+      <label class="control-label">Body</label>
+      <input class="form-control" type="number" ng-model="wine.Characteristics.Body" integer min="0" max="100" maxlength="2">
+      <label class="control-label">Fruit</label>
+      <input class="form-control" type="number" ng-model="wine.Characteristics.Fruit" integer min="0" max="100" maxlength="2">
+      <label class="control-label">Sweet</label>
+      <input class="form-control" type="number" ng-model="wine.Characteristics.Sweet" integer min="0" max="100" maxlength="2">
     </div>
+  </form>
+  <div class="clearfix">&nbsp;</div>
+</div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" ng-click="editSubmit()">Save Changes</button>
+<button class="btn btn-warning" ng-click="$dismiss()">Cancel</button>
+</div>

@@ -34,3 +34,7 @@ h1 {
 .form-control {
   font-size: 1.5em;
 }
+
+input[type=text] {
+  height:30px !important;
+}

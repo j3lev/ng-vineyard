@@ -18,7 +18,7 @@
         <div class="jumbotron">
           <h1>Vineyard Inventory</h1>
           <p>Browse our selection of wines from across the world. These are guarenteed to satisfy even the most sophisticated of palettes.</p>
-          <button class="btn btn-default glyphicon glyphicon-plus new-btn" type="button"></button>
+          <button class="btn btn-default glyphicon glyphicon-plus new-btn" type="button" ng-click="edit(-1, -1, true)"></button>
         </div>
       </div>
       <div class="clearfix">&nbsp;</div>
@@ -29,10 +29,10 @@
             <div class="panel-heading">
               <strong>{{wine.Name}}</strong>
               <button class="btn btn-default glyphicon glyphicon-remove pull-right btn-xs" type="button"></button>
-              <button class="btn btn-default glyphicon glyphicon-edit pull-right btn-xs" type="button" ng-click="edit($index, wine)"></button>
+              <button class="btn btn-default glyphicon glyphicon-edit pull-right btn-xs" type="button" ng-click="edit($index, wine, false)"></button>
               <div class="clearfix"></div>
             </div>
-            <div class="list-group-item" ng-repeat="(attr, x) in wine" ng-hide="attr=='Color' || attr=='Characteristics'">
+            <div class="list-group-item" ng-repeat="(attr, x) in wine" ng-hide="attr=='Color' || attr=='Characteristics' || attr=='Name'">
               <h4 class="list-group-item-heading">{{attr}}</h4>
               <p class="list-group-item-text">{{x}}</p>
             </div>
