@@ -44,10 +44,10 @@ angular.module('ngVineyardApp')
             $scope.wines[index] = wine;
         }
 
+
         $scope.delete = function(index) {
         	$scope.wines.splice(index, 1);
         }
-
     })
 
 .controller('editCtrl', function($scope, $modalInstance, wine, index, isNew) {
