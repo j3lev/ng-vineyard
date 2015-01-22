@@ -28,7 +28,7 @@
           <div class="panel" ng-class="{'panel-danger': wine.Color.toLowerCase() == 'red', 'panel-warning': wine.Color.toLowerCase() == 'white'}">
             <div class="panel-heading">
               <strong>{{wine.Name}}</strong>
-              <button class="btn btn-default glyphicon glyphicon-remove pull-right btn-xs" type="button"></button>
+              <button class="btn btn-default glyphicon glyphicon-remove pull-right btn-xs" type="button" ng-click="delete($index)"></button>
               <button class="btn btn-default glyphicon glyphicon-edit pull-right btn-xs" type="button" ng-click="edit($index, wine, false)"></button>
               <div class="clearfix"></div>
             </div>

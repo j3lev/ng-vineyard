@@ -32,13 +32,20 @@ angular.module('ngVineyardApp')
             });
 
             editInstance.result.then(function(editedWine) {
+                if (isNew) {
+                	$scope.wines.push(editedWine);
+                	index = $scope.wines.length - 1;
+                }
                 update(editedWine, index);
             });
-
         };
 
         function update(wine, index) {
             $scope.wines[index] = wine;
+        }
+
+        $scope.delete = function(index) {
+        	$scope.wines.splice(index, 1);
         }
 
     })
@@ -68,17 +75,6 @@ angular.module('ngVineyardApp')
 
 
         $scope.editSubmit = function() {
-            if (isNew) {
-                console.log($scope.wine);
-            }
             $modalInstance.close($scope.wine);
         }
-
-
-
-
-
-
-
-
 });
